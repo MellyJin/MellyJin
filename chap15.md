@@ -64,6 +64,7 @@ ex) 장바구니 예제
 ![image](https://user-images.githubusercontent.com/114047824/199529534-15e7d362-1004-46df-93ba-774a28ed5e9f.png)
 
 - 순서가 섞인다? 순서대로 실행되는 두 액션 사이에 다른 타임라인에 있는 액션이 끼어드는 것
+
 가능한 실행 순서가 많을수록 결과를 예측하기 어려워진다.
 ![image](https://user-images.githubusercontent.com/114047824/199529610-e461d751-2e4f-4a52-8349-1caf79ec2d57.png)
 
