@@ -62,12 +62,14 @@ function dinner(food) {
 - 공유하는 자원을 적게
 - 자원을 공유할 땐 서로 조율하고
 - 시간을 일급으로 다룬다. -> 다른 장에서 자세히..
+
 ![image](https://user-images.githubusercontent.com/114047824/199459809-42d37fcc-c1b1-4cca-82bf-b8c4ba329285.png)
 
 
 해당 문제 해결법
-1. 공유하는 자원 없애기
-  - 전역변수를 지역변수로
+### 공유하는 자원 없애기
+  #### 전역변수를 지역변수로
+  지역변수로 바꿀 수 있는 전역변수를 찾고,
    ```
   function calc_cart_total() {
     total = 0;
@@ -80,7 +82,9 @@ function dinner(food) {
     });
 }
  ```
- 
+ ![image](https://user-images.githubusercontent.com/114047824/199462072-0a8a9409-6fd9-4ac8-adc7-64a969d8270c.png)
+
+  바꾼다
   ```
   function calc_cart_total() {
     var total = 0;
@@ -93,7 +97,11 @@ function dinner(food) {
     });
 }
   ```
-  - 전역변수를 인자로
+  ![image](https://user-images.githubusercontent.com/114047824/199462017-68790e50-64c3-4d8c-84ad-5c125e03fd55.png)
+
+  
+  #### 전역변수를 인자로
+  암묵적 인자를 확인하고.
   ```
   function add_item_to_cart(name, price, quantity) {
     cart = add_item(cart, name, price, quantity);
@@ -110,7 +118,8 @@ function calc_cart_total() {
     });
 }
 ```
-
+![image](https://user-images.githubusercontent.com/114047824/199461351-39ea5ed5-3c45-4c0c-8313-b0860da8c26c.png)
+  인자로 바꾼다.
 ```
 function add_item_to_cart(name, price, quantity) {
     cart = add_item(cart, name, price, quantity);
@@ -127,7 +136,7 @@ function calc_cart_total(cart) {
     });
 }
 ```
-
+![image](https://user-images.githubusercontent.com/114047824/199461502-61dece8c-45ef-4b06-a03c-428679244254.png)
 
 
 -----
