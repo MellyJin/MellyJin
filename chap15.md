@@ -6,7 +6,7 @@
 
 ❔ 문제 상황: 장바구니당 배송비가 한번만 추가되어야하는데, 빠르게 두 번 클릭시, 배송비가 2번 계산된다.
 - 왜 이런 문제가 발생했는지, 타임라인 다이어그램을 그려 확인해보자.
--img 
+![image](https://user-images.githubusercontent.com/114047824/199459087-c047c922-463b-4932-8ae2-581236d0b9ba.png)
 
 # 
 
@@ -22,10 +22,12 @@ function dinner(food) {
   eat(food);
 }
 ```
--img
+![image](https://user-images.githubusercontent.com/114047824/199459352-a99dfc02-bd37-4cb3-872f-7a5775cd42e8.png)
+
 
 여러 명이 동시에 저녁을 먹는다면?
--img  
+![image](https://user-images.githubusercontent.com/114047824/199459296-0512b62c-2a99-402a-a236-da41252a87e6.png)
+ 
 
 ## 타임라인 그리기
 
@@ -60,14 +62,73 @@ function dinner(food) {
 - 공유하는 자원을 적게
 - 자원을 공유할 땐 서로 조율하고
 - 시간을 일급으로 다룬다. -> 다른 장에서 자세히..
+![image](https://user-images.githubusercontent.com/114047824/199459809-42d37fcc-c1b1-4cca-82bf-b8c4ba329285.png)
+
 
 해당 문제 해결법
 1. 공유하는 자원 없애기
   - 전역변수를 지역변수로
+   ```
+  function calc_cart_total() {
+    total = 0;
+    cost_ajax(cart, function(cost) {
+        total += cost;
+        shipping_ajax(cart, function(shipping) {
+            total += shipping;
+            update_total_dom(total);
+        });
+    });
+}
+ ```
+ 
   ```
+  function calc_cart_total() {
+    var total = 0;
+    cost_ajax(cart, function(cost) {
+        total += cost;
+        shipping_ajax(cart, function(shipping) {
+            total += shipping;
+            update_total_dom(total);
+        });
+    });
+}
   ```
   - 전역변수를 인자로
-2. 
+  ```
+  function add_item_to_cart(name, price, quantity) {
+    cart = add_item(cart, name, price, quantity);
+    calc_cart_total();
+}
+function calc_cart_total() {
+    var total = 0;
+    cost_ajax(cart, function(cost) {
+        total += cost;
+        shipping_ajax(cart, function(shipping) {
+            total += shipping;
+            update_total_dom(total);
+        });
+    });
+}
+```
+
+```
+function add_item_to_cart(name, price, quantity) {
+    cart = add_item(cart, name, price, quantity);
+    calc_cart_total(cart);
+}
+function calc_cart_total(cart) {
+    var total = 0;
+    cost_ajax(cart, function(cost) {
+        total += cost;
+        shipping_ajax(cart, function(shipping) {
+            total += shipping;
+            update_total_dom(total);
+        });
+    });
+}
+```
+
+
 
 -----
 ### Q. 연습문제
