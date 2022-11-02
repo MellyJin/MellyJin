@@ -77,7 +77,9 @@ ex) 장바구니 예제
 - 하나의 타임라인에 있는 모든 액션을 하나로 통합
 - 타임라인이 끝나는 곳에서 새로운 타임라인이 하나만 생기면 통합
 
-![image](https://user-images.githubusercontent.com/114047824/199530403-3e101fd1-c650-41b1-92e3-054313c1289e.png)
+|통합 전|통합 후|
+|-----|-----|
+|![image](https://user-images.githubusercontent.com/114047824/199536007-316a5e9d-448f-4a48-a7a4-0b109542bf16.png)|![image](https://user-images.githubusercontent.com/114047824/199530403-3e101fd1-c650-41b1-92e3-054313c1289e.png)|
 
 
 ## 좋은 타임라인
