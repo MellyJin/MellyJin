@@ -5,9 +5,13 @@
 
 
 ❔ 문제 상황: 장바구니당 배송비가 한번만 추가되어야하는데, 빠르게 두 번 클릭시, 배송비가 2번 계산된다.
-- 왜 이런 문제가 발생했는지, 타임라인 다이어그램을 통해 확인해보자.
+|정상 상황|문제 상황|
+|-------|-------|
+|![image](https://user-images.githubusercontent.com/114047824/199532365-1c4bc04b-0bd2-4b3d-8222-036960b93355.png)|![image](https://user-images.githubusercontent.com/114047824/199532391-8e4151b3-28cf-4d61-ae5b-ebb07e4ac73c.png)|
 
-# 
+- 왜 이런 문제가 발생했는지, 타임라인 다이어그램을 그려보고 다이어그램을 통해 확인해보자.
+
+-----
 
 ### 타임라인 다이어그램 기본 규칙 
 1. 두 액션이 <u>**순서대로**</u> 나타나면, **같은 타임라인**에 넣는다.
@@ -55,6 +59,7 @@ ex) 장바구니 예제
 ![image](https://user-images.githubusercontent.com/114047824/199525635-75c80643-7646-4ddc-af97-9c06ca9ba3b7.png)
 
 순서가 섞일 수 있는 코드 VS **순서가 섞이지 않는 코드** 👍
+
 ![image](https://user-images.githubusercontent.com/114047824/199529534-15e7d362-1004-46df-93ba-774a28ed5e9f.png)
 
 - 순서가 섞인다? 순서대로 실행되는 두 액션 사이에 다른 타임라인에 있는 액션이 끼어드는 것
@@ -84,11 +89,9 @@ ex) 장바구니 예제
 #
 
 ## > 장바구니 배송비 계산 문제 원인 발견
-정상 계산 케이스) 
-![image](https://user-images.githubusercontent.com/114047824/199531028-5565be8d-7bfd-418c-b503-faf49c6c0dfd.png)
-
-계산 오류 케이스) - 빠르게 클릭
-![image](https://user-images.githubusercontent.com/114047824/199530827-8999cb5e-2c5f-4d46-98dc-47ce39ec4acf.png)
+|정상 상황|문제 상황(빠르게 클릭)|
+|-------|-------| 
+|![image](https://user-images.githubusercontent.com/114047824/199531028-5565be8d-7bfd-418c-b503-faf49c6c0dfd.png)|![image](https://user-images.githubusercontent.com/114047824/199530827-8999cb5e-2c5f-4d46-98dc-47ce39ec4acf.png)|
 
 -----
 
@@ -111,8 +114,6 @@ ex) 장바구니 예제
     });
 }
  ```
- ![image](https://user-images.githubusercontent.com/114047824/199462072-0a8a9409-6fd9-4ac8-adc7-64a969d8270c.png)
-
   바꾼다
   ```
   function calc_cart_total() {
@@ -126,11 +127,13 @@ ex) 장바구니 예제
     });
 }
   ```
-  ![image](https://user-images.githubusercontent.com/114047824/199462017-68790e50-64c3-4d8c-84ad-5c125e03fd55.png)
+  |변경 전|변경 후|
+|-----|-----|
+| ![image](https://user-images.githubusercontent.com/114047824/199462072-0a8a9409-6fd9-4ac8-adc7-64a969d8270c.png)|![image](https://user-images.githubusercontent.com/114047824/199462017-68790e50-64c3-4d8c-84ad-5c125e03fd55.png)|
 
   
   #### 2. 전역변수를 인자로
-  암묵적 인자를 확인하고.
+  암묵적 인자를 확인하고,
   ```
   function add_item_to_cart(name, price, quantity) {
     cart = add_item(cart, name, price, quantity);
@@ -147,8 +150,6 @@ function calc_cart_total() {
     });
 }
 ```
-![image](https://user-images.githubusercontent.com/114047824/199461351-39ea5ed5-3c45-4c0c-8313-b0860da8c26c.png)
-
 인자로 바꾼다.
 ```
 function add_item_to_cart(name, price, quantity) {
@@ -166,7 +167,9 @@ function calc_cart_total(cart) {
     });
 }
 ```
-![image](https://user-images.githubusercontent.com/114047824/199461502-61dece8c-45ef-4b06-a03c-428679244254.png)
+|변경 전|변경 후|
+|-----|-----|
+|![image](https://user-images.githubusercontent.com/114047824/199461351-39ea5ed5-3c45-4c0c-8313-b0860da8c26c.png)|![image](https://user-images.githubusercontent.com/114047824/199461502-61dece8c-45ef-4b06-a03c-428679244254.png)|
 
 -----
 
