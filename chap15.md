@@ -9,9 +9,6 @@
 |-------|-------|
 |![image](https://user-images.githubusercontent.com/114047824/199532365-1c4bc04b-0bd2-4b3d-8222-036960b93355.png)|![image](https://user-images.githubusercontent.com/114047824/199532391-8e4151b3-28cf-4d61-ae5b-ebb07e4ac73c.png)|
 
-test
-<img src="https://user-images.githubusercontent.com/114047824/199532365-1c4bc04b-0bd2-4b3d-8222-036960b93355.png)|![image](https://user-images.githubusercontent.com/114047824/199532391-8e4151b3-28cf-4d61-ae5b-ebb07e4ac73c.png", height="50"/>
-
 - 왜 이런 문제가 발생했는지, 타임라인 다이어그램을 그려보고 다이어그램을 통해 확인해보자.
 
 -----
