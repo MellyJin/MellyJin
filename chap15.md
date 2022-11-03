@@ -25,12 +25,13 @@ function dinner(food) {
   eat(food);
 }
 ```
-![image](https://user-images.githubusercontent.com/114047824/199459352-a99dfc02-bd37-4cb3-872f-7a5775cd42e8.png)
+
+<img src="https://user-images.githubusercontent.com/114047824/199459352-a99dfc02-bd37-4cb3-872f-7a5775cd42e8.png" width="500"/>
 
 
 여러 명이 동시에 저녁을 먹는다면? 각 사람들의 식사는 어떤 순서로 이뤄질지 알 수 없다. -> 분리된 타임라인
 
-![image](https://user-images.githubusercontent.com/114047824/199459296-0512b62c-2a99-402a-a236-da41252a87e6.png)
+<img src="https://user-images.githubusercontent.com/114047824/199459296-0512b62c-2a99-402a-a236-da41252a87e6.png" height="300"/>
  
 
 ## ⭐ 타임라인 그리기 ⭐
@@ -41,15 +42,15 @@ function dinner(food) {
 - 인자는 함수를 부르기 전에 실행된다.
 
 ex) 장바구니 예제
-![image](https://user-images.githubusercontent.com/114047824/199527251-e6f6159c-1e52-4510-b61e-285f88c02b34.png)
-![image](https://user-images.githubusercontent.com/114047824/199529112-559c15c0-4ad2-403f-a089-1d998659b87f.png)
+<img src="https://user-images.githubusercontent.com/114047824/199527251-e6f6159c-1e52-4510-b61e-285f88c02b34.png" height="300"/>
+<img src="https://user-images.githubusercontent.com/114047824/199529112-559c15c0-4ad2-403f-a089-1d998659b87f.png" height="300"/>
 
 
 ### 2단계: 순서대로 실행되거나, 동시에 실행되는 액션 그리기
 비동기 호출은 새로운 타임라인으로 그린다.
 
 ex) 장바구니 예제
-![image](https://user-images.githubusercontent.com/114047824/199529324-66e221a1-638a-42f2-9d44-1a89453aceb5.png)
+<img src="https://user-images.githubusercontent.com/114047824/199529324-66e221a1-638a-42f2-9d44-1a89453aceb5.png" height="300"/>
 
 |유형|언어|특징|
 |-----|-----|-----|
@@ -58,18 +59,17 @@ ex) 장바구니 예제
 |멀티스레드|Java, Python, Ruby, C, C# ...|실행 순서를 보장하지 않아 프로그래밍하기 어려움|
 |메시지 패싱|Elixir, Erlang|서로 다른 프로세스를 동시에 실행할 수 있는 스레드 모델 지원, 메모리를 공유하지 않고 메시지로 통신 서로 다른 타임라인에 있는 액션이 순서가 섞이더라도, 메모리를 공유하지 않아 문제가 되지 않음|
 
-![image](https://user-images.githubusercontent.com/114047824/199525635-75c80643-7646-4ddc-af97-9c06ca9ba3b7.png)
+<img src="https://user-images.githubusercontent.com/114047824/199525635-75c80643-7646-4ddc-af97-9c06ca9ba3b7.png" height="500"/>
 
 순서가 섞일 수 있는 코드 VS **순서가 섞이지 않는 코드** 👍
 
-![image](https://user-images.githubusercontent.com/114047824/199529534-15e7d362-1004-46df-93ba-774a28ed5e9f.png)
+<img src="https://user-images.githubusercontent.com/114047824/199529534-15e7d362-1004-46df-93ba-774a28ed5e9f.png" height="200"/>
 
 - 순서가 섞인다? 순서대로 실행되는 두 액션 사이에 다른 타임라인에 있는 액션이 끼어드는 것
 
 
 가능한 실행 순서가 많을수록 결과를 예측하기 어려워진다.
-
-![image](https://user-images.githubusercontent.com/114047824/199529610-e461d751-2e4f-4a52-8349-1caf79ec2d57.png)
+<img src="https://user-images.githubusercontent.com/114047824/199529610-e461d751-2e4f-4a52-8349-1caf79ec2d57.png" height="100"/>
 
 
 > 자바스크립트 비동기큐 - 자바스크립트는 작업큐라는 큐를 가지고 이벤트 루프를 통해 작업을 처리한다. 비동기 동작을 호출하면 작업큐에 콜백이 추가된다. 
@@ -93,7 +93,7 @@ ex) 장바구니 예제
 - 자원을 공유할 땐 서로 조율하고
 - 시간을 일급으로 다룬다? -> 다른 장에서 자세히..(다음발표자에게)
 
-![image](https://user-images.githubusercontent.com/114047824/199459809-42d37fcc-c1b1-4cca-82bf-b8c4ba329285.png)
+<img src="https://user-images.githubusercontent.com/114047824/199459809-42d37fcc-c1b1-4cca-82bf-b8c4ba329285.png" height="200"/>
 
 #
 
@@ -107,7 +107,7 @@ ex) 장바구니 예제
 
 ## 해결 시도 
 ### 공유하는 자원 없애기
-![image](https://user-images.githubusercontent.com/114047824/199530745-dddf3167-d11e-44d2-961b-47eacb48c0a9.png)
+<img src="https://user-images.githubusercontent.com/114047824/199530745-dddf3167-d11e-44d2-961b-47eacb48c0a9.png" height="300"/>
 
   #### 1. 전역변수를 지역변수로
   지역변수로 바꿀 수 있는 전역변수를 찾고,
@@ -209,6 +209,3 @@ function calc_cart_total(cart) {
 |2|스시|분산시스템에서도 가장(?) 많이 이야기가 나왔던 '시간'에 대한 부분을 알기 쉽게 설명된 듯 합니다. 결국은 전역변수를 사용하는 액션을 최대한 제거하는 것이 가장 중요한 것을 다시금 느꼈습니다.|
 |3|젤리|동작들이 수행되는 순서를 알고, 동작간의 영향을 알고, 이러한 것들에 대해서 타임라인으로 나타내면 순서가 바뀌어서 나타나는 문제에 대해서 파악하기 좋을 것 같습니다. 클릭 두번을 시간에 따라 예를 들어서 자세하게 설명된 점이 좋았습니다.|
 |4|티모|복잡한 상황에서 발생할 수 있는 오류를 타임라인 다이어그램을 통해 찾아낼 수 있다는 것을 배웠습니다.|
-
-
-<img src="https://user-images.githubusercontent.com/114047824/199459296-0512b62c-2a99-402a-a236-da41252a87e6.png" width="50"/>
