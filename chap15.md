@@ -93,7 +93,7 @@ ex) 장바구니 예제
 
 #
 
-## > 장바구니 배송비 계산 문제 원인 발견
+## 장바구니 배송비 계산 문제 원인 발견
 |정상 상황|문제 상황(빠르게 클릭)|
 |-------|-------| 
 |![image](https://user-images.githubusercontent.com/114047824/199531028-5565be8d-7bfd-418c-b503-faf49c6c0dfd.png)|![image](https://user-images.githubusercontent.com/114047824/199530827-8999cb5e-2c5f-4d46-98dc-47ce39ec4acf.png)|
@@ -101,7 +101,7 @@ ex) 장바구니 예제
 -----
 
 
-## 해결 방법
+## 해결 시도 
 ### 공유하는 자원 없애기
 ![image](https://user-images.githubusercontent.com/114047824/199530745-dddf3167-d11e-44d2-961b-47eacb48c0a9.png)
 
@@ -175,6 +175,8 @@ function calc_cart_total(cart) {
 |변경 전|변경 후|
 |-----|-----|
 |![image](https://user-images.githubusercontent.com/114047824/199461351-39ea5ed5-3c45-4c0c-8313-b0860da8c26c.png)|![image](https://user-images.githubusercontent.com/114047824/199461502-61dece8c-45ef-4b06-a03c-428679244254.png)|
+
+##### 그러나, 여전히 DOM을 공유하는데, 이에 대한 해결 방법은 다음 장에서 알아본다.
 
 -----
 
