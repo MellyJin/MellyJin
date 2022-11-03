@@ -29,6 +29,7 @@ function dinner(food) {
 
 
 여러 명이 동시에 저녁을 먹는다면? 각 사람들의 식사는 어떤 순서로 이뤄질지 알 수 없다. -> 분리된 타임라인
+
 ![image](https://user-images.githubusercontent.com/114047824/199459296-0512b62c-2a99-402a-a236-da41252a87e6.png)
  
 
@@ -81,7 +82,7 @@ ex) 장바구니 예제
 - 타임라인이 끝나는 곳에서 새로운 타임라인이 하나만 생기면 통합
 
 |통합 전|통합 후|
-|-----|-----|
+|------|------|
 |![image](https://user-images.githubusercontent.com/114047824/199536007-316a5e9d-448f-4a48-a7a4-0b109542bf16.png)|![image](https://user-images.githubusercontent.com/114047824/199530403-3e101fd1-c650-41b1-92e3-054313c1289e.png)|
 
 
@@ -98,7 +99,7 @@ ex) 장바구니 예제
 
 ## 장바구니 배송비 계산 문제 원인 발견
 |정상 상황|문제 상황(빠르게 클릭)|
-|-------|-------| 
+|-------|------------------| 
 |![image](https://user-images.githubusercontent.com/114047824/199531028-5565be8d-7bfd-418c-b503-faf49c6c0dfd.png)|![image](https://user-images.githubusercontent.com/114047824/199530827-8999cb5e-2c5f-4d46-98dc-47ce39ec4acf.png)|
 
 -----
@@ -136,7 +137,7 @@ ex) 장바구니 예제
 }
   ```
 |변경 전|변경 후|
-|-----|-----|
+|------|------|
 | ![image](https://user-images.githubusercontent.com/114047824/199462072-0a8a9409-6fd9-4ac8-adc7-64a969d8270c.png)|![image](https://user-images.githubusercontent.com/114047824/199462017-68790e50-64c3-4d8c-84ad-5c125e03fd55.png)|
 
   
@@ -176,10 +177,10 @@ function calc_cart_total(cart) {
 }
 ```
 |변경 전|변경 후|
-|-----|-----|
+|------|------|
 |![image](https://user-images.githubusercontent.com/114047824/199461351-39ea5ed5-3c45-4c0c-8313-b0860da8c26c.png)|![image](https://user-images.githubusercontent.com/114047824/199461502-61dece8c-45ef-4b06-a03c-428679244254.png)|
 
-##### 그러나, 여전히 DOM을 공유하는데, 이에 대한 해결 방법은 다음 장에서 알아본다.
+##### 그러나, 여전히 DOM을 공유하기 때문에 문제는 여전히 남아있는데! 이에 대한 해결 방법은 다음 장에서 알아본다.
 
 -----
 
