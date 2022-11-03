@@ -18,7 +18,7 @@
 2. 두 액션이 **동시에 실행**되거나 **순서를 예상할 수 없다**면, **분리된 타임라인**에 넣는다.
 
 ex) 저녁 준비하기, 요리하고 먹기까지의 과정은 순서대로 이루어진다. -> 같은 타임라인
-```
+```javascript
 function dinner(food) {
   cook(food);
   serve(food);
@@ -111,7 +111,7 @@ ex) 장바구니 예제
 
   #### 1. 전역변수를 지역변수로
   지역변수로 바꿀 수 있는 전역변수를 찾고,
-   ```
+   ```javascript
   function calc_cart_total() {
     total = 0;
     cost_ajax(cart, function(cost) {
@@ -124,7 +124,7 @@ ex) 장바구니 예제
 }
  ```
   바꾼다
-  ```
+  ```javascript
   function calc_cart_total() {
     var total = 0;
     cost_ajax(cart, function(cost) {
@@ -143,7 +143,7 @@ ex) 장바구니 예제
   
   #### 2. 전역변수를 인자로
   암묵적 인자를 확인하고,
-  ```
+  ```javascript
   function add_item_to_cart(name, price, quantity) {
     cart = add_item(cart, name, price, quantity);
     calc_cart_total();
@@ -160,7 +160,7 @@ function calc_cart_total() {
 }
 ```
 인자로 바꾼다.
-```
+```javascript
 function add_item_to_cart(name, price, quantity) {
     cart = add_item(cart, name, price, quantity);
     calc_cart_total(cart);
